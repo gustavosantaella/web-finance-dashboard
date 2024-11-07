@@ -24,3 +24,18 @@ $max-size: 100rem;
   }
 
 }
+
+.success-snackbar div:first-child{
+  background-color: #46A35E!important;
+}
+
+.info-snackbar div:first-child{
+  background-color: #636363!important;
+}
+
+.error-snackbar div:first-child{
+  background-color: #eb3434!important;
+}
+.warning-snackbar div:first-child{
+  background-color: #ffc118!important;
+}

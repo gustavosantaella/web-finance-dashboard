@@ -1,21 +1,23 @@
 <ng-container>
-  <div
+  <form
     class="d-flex flex-row flex-wrap justify-content-start align-items-center"
+    [formGroup]="form"
+
   >
     <mat-form-field class="col-md-3">
       <mat-label>Income or Expense</mat-label>
-      <mat-select>
+      <mat-select formControlName="type">
         <mat-option value="I">Income</mat-option>
         <mat-option value="E">Expense</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field class="col-md-3">
       <mat-label>Amount</mat-label>
-      <input matInput placeholder="Amount" />
+      <input matInput placeholder="Amount" formControlName="amount" type="number" />
     </mat-form-field>
     <mat-form-field class="col-md-3">
-      <mat-label>Choose a date</mat-label>
-      <input matInput [matDatepicker]="picker" />
+      <mat-label >Date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" />
       <mat-datepicker-toggle
         matIconSuffix
         [for]="picker"
@@ -23,14 +25,16 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-    <button mat-button class="bg-success col-md-1">
+    <button (click)="add()" mat-button class="bg-success col-md-1">
       <mat-icon>
         <i-tabler name="plus" class="icon-20"></i-tabler>
       </mat-icon>
     </button>
-  </div>
+  </form>
   <div class="table table-responsive">
-    <mat-card class="">
+    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
+    <mat-card class="cardWithShadow">
       <mat-card-header>
         <mat-card-title>Income</mat-card-title>
         <mat-card-subtitle>2024-11-13</mat-card-subtitle>

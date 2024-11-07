@@ -5,8 +5,13 @@ import { FinancesRoutes } from './finance.routing';
 import { RecordComponent } from './record/record.component';
 
 @NgModule({
-  declarations: [RecordComponent],
+  declarations: [RecordComponent ],
   exports: [RecordComponent],
   imports: [GloblaModule, RouterModule.forChild(FinancesRoutes)],
 })
-export class FinanceModule {}
+export class FinanceModule {
+
+  constructor(
+
+  ){}
+}

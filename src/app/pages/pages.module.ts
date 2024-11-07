@@ -8,6 +8,7 @@ import { PagesRoutes } from './pages.routing.module';
 // icons
 import { TablerIconsModule } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
+import { GloblaModule } from '../shared/global.module';
 import { AppDashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AppDashboardComponent } from './dashboard/dashboard.component';
   imports: [
     CommonModule,
     MaterialModule,
+    GloblaModule,
     FormsModule,
     NgApexchartsModule,
     RouterModule.forChild(PagesRoutes),
