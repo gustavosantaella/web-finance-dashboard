@@ -10,17 +10,17 @@ $max-size: 100rem;
 
 @for $i from 1 through 100 {
   .mr-#{$i} {
-    margin-left: $i * 1px;
+    margin-right: $i * 1px;
   }
   .ml-#{$i} {
     margin-left: $i * 1px;
   }
   .mt-#{$i} {
-    margin-left: $i * 1px;
+    margin-top: $i * 1px;
   }
 
   .mb-#{$i} {
-    margin-left: $i * 1px;
+    margin-bottom: $i * 1px;
   }
 
 }
