@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+
+$min-size: 1rem;
+$max-size: 100rem;
+
+@for $i from 1 through 100 {
+  .mr-#{$i} {
+    margin-left: $i * 1px;
+  }
+  .ml-#{$i} {
+    margin-left: $i * 1px;
+  }
+  .mt-#{$i} {
+    margin-left: $i * 1px;
+  }
+
+  .mb-#{$i} {
+    margin-left: $i * 1px;
+  }
+
+}
